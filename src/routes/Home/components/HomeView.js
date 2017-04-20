@@ -1,7 +1,6 @@
 import React from 'react'
 import DuckImage from '../assets/Duck.jpg'
 import './HomeView.scss'
-import './HomeView.less'
 
 export const HomeView = () => (
   <div>
