@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+/* eslint-disable react/prop-types */
+import React, { Component } from 'react'
 import { browserHistory, Router } from 'react-router'
 import { Provider } from 'react-redux'
 

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const webpack = require('webpack')
 const cssnano = require('cssnano')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -119,6 +120,16 @@ webpackConfig.module.loaders.push({
     BASE_CSS_LOADER,
     'postcss',
     'sass?sourceMap'
+  ]
+})
+webpackConfig.module.loaders.push({
+  test: /\.less$/,
+  exclude: null,
+  loaders: [
+    'style',
+    BASE_CSS_LOADER,
+    'postcss',
+    'less?sourceMap'
   ]
 })
 webpackConfig.module.loaders.push({
