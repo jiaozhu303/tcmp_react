@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars,max-len */
 import React from 'react'
-import ReactDOM from 'react-dom'
+import QueueAnim from 'rc-queue-anim'
 import enquire from 'enquire.js'
 import { scrollScreen } from 'rc-scroll-anim'
 
@@ -12,8 +12,17 @@ export default class Home extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      isMode: false
+      isMode: false,
+      show: true
     }
+    this.onClick = this.onClick.bind(this)
+  }
+
+  onClick () {
+    this.setState({
+      isMode: this.state.isMode,
+      show: !this.state.show
+    })
   }
 
   componentDidMount () {
@@ -37,12 +46,17 @@ export default class Home extends React.Component {
   }
 
   render () {
-    const children = [
-      <Content0 id='content_0_0' key='content_0_0' className="banner0" isMode={this.state.isMode} />
+    const login = [
+      <Content0 id='content_0_0' key='content_0_0' className='banner0' isShow={this.onClick} isMode={this.state.isMode} />
+    ]
+    const main = [
+
     ]
     return (
       <div className='templates-wrapper'>
-        {children}
+        <QueueAnim className='demo-content'>
+          {this.state.show ? login : main}
+        </QueueAnim>
       </div>
     )
   }

@@ -1,27 +1,98 @@
 {
-//  "parser": "babel-eslint",
-//  "extends": [
-//    "standard",
-//    "standard-react"
-//  ],
-//  "plugins": [
-//    "babel",
-//    "react",
-//    "promise"
-//  ],
-//  "env": {
-//    "browser" : true
-//  },
-//  "globals": {
-//    "__DEV__"      : false,
-//    "__TEST__"     : false,
-//    "__PROD__"     : false,
-//    "__COVERAGE__" : false
-//  },
-//  "rules": {
-//    "key-spacing"          : 0,
-//    "jsx-quotes"           : [2, "prefer-single"],
-//    "max-len"              : [2, 120, 2],
-//    "object-curly-spacing" : [2, "always"]
-//  }
+    "parser": "babel-eslint",
+    "extends": [
+        "standard",
+        "standard-react"
+    ],
+    "plugins": [
+        "babel",
+        "react",
+        "promise"
+    ],
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "__DEV__": false,
+        "__TEST__": false,
+        "__PROD__": false,
+        "__COVERAGE__": false
+    },
+    "rules": {
+        "no-extra-semi": "error",
+        "no-unreachable": "error",
+        "no-multi-spaces": "error",
+        "block-spacing": [
+            "error",
+            "always"
+        ],
+        "key-spacing": [
+            "error",
+            {
+                "beforeColon": false,
+                "afterColon": true,
+                "mode": "strict"
+            }
+        ],
+        "keyword-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "space-infix-ops": [
+            "error"
+        ],
+        "no-lonely-if": [
+            "error"
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1
+            }
+        ],
+        "no-whitespace-before-property": [
+            "error"
+        ],
+        "no-unneeded-ternary": [
+            "error"
+        ],
+        "padded-blocks": [
+            "error",
+            "never"
+        ],
+        "no-self-assign": [
+            "error"
+        ],
+        "no-self-compare": [
+            "error"
+        ],
+        "no-unused-labels": [
+            "error"
+        ],
+        "no-useless-concat": [
+            "error"
+        ],
+        "no-return-assign": [
+            "error"
+        ],
+        "no-class-assign": [
+            "error"
+        ],
+        "no-fallthrough": [
+            "error"
+        ],
+        "no-invalid-this": [
+            "error"
+        ],
+        "no-lone-blocks": [
+            "error"
+        ],
+        "no-loop-func": [
+            "error"
+        ]
+    }
+}
 }

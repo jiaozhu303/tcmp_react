@@ -12,7 +12,8 @@ class Content extends React.Component {
   }
   render () {
     const props = { ...this.props }
-    delete props.isMode
+    delete props.isMode;
+    delete props.isShow;
     return (
       <OverPack
         replay
@@ -37,8 +38,8 @@ class Content extends React.Component {
             key='content'
             id={`${props.id}-content`}
           />
-          <div className="title">
-            <Login></Login>
+          <div className="content">
+            <Login isShow={this.props.isShow}></Login>
           </div>
 
         </QueueAnim>
