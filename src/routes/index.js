@@ -1,5 +1,4 @@
-
-import Home from './home/index'
+import Home from './Home/index'
 
 import RouteRoute from './Route'
 import PageNotFound from './PageNotFound'

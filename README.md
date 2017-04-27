@@ -110,16 +110,3 @@ Babel被配置[babel-plugin-transform-runtime](https://www.npmjs.com/package/bab
 ## 静态部署
 
 如果你正在使用nginx处理程序，确保所有的路由都直接指向 `~/dist/index.html` 文件，然后让react-router处理剩下的事。如果你不是很确定应该怎么做，[文档在这里](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API，或者其它你想要做的事，这完全取决于你。
-
-## 谢谢大家
-
-如果没有大家的贡献，这个项目是不可能诞生的， 感谢所有为这个项目做出贡献的人。
-
-This program is come from [davezuko](https://github.com/davezuko)
-
-* [Justin Greenberg](https://github.com/justingreenberg) - For all of your PR's, getting us to Babel 6, and constant work improving our patterns.
-* [Roman Pearah](https://github.com/neverfox) - For your bug reports, help in triaging issues, and PR contributions.
-* [Spencer Dixin](https://github.com/SpencerCDixon) - For your creation of [redux-cli](https://github.com/SpencerCDixon/redux-cli).
-* [Jonas Matser](https://github.com/mtsr) - For your help in triaging issues and unending support in our Gitter channel.
-
-Thanks you guys all the time.
