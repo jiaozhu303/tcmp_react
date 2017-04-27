@@ -4,7 +4,9 @@ import QueueAnim from 'rc-queue-anim'
 import enquire from 'enquire.js'
 import { scrollScreen } from 'rc-scroll-anim'
 
-import Content0 from './Content0'
+import Content from './Content'
+
+import CoreLayout from '../../layouts/CoreLayout'
 
 import './less/antMotion_style.less'
 
@@ -47,14 +49,21 @@ export default class Home extends React.Component {
 
   render () {
     const login = [
-      <Content0 id='content_0_0' key='content_0_0' className='banner0' isShow={this.onClick} isMode={this.state.isMode} />
+      <Content id='content_0_0' key='content_0_0' className='banner0' isShow={this.onClick} isMode={this.state.isMode} />
     ]
     const main = [
-
+        <CoreLayout >
+            <div>content</div>
+        </CoreLayout>
     ]
     return (
       <div className='templates-wrapper'>
-        <QueueAnim className='demo-content'>
+        <QueueAnim className='demo-content'
+                   animConfig={[
+                       { opacity: [1, 0], translateY: [0, 50] },
+                       { opacity: [1, 0], translateY: [0, -50] }
+                   ]}
+        >
           {this.state.show ? login : main}
         </QueueAnim>
       </div>

@@ -1,11 +1,10 @@
-/* eslint-disable react/no-unused-prop-types */
 import React, { PropTypes } from 'react'
 import QueueAnim from 'rc-queue-anim'
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
-import Login from './Login'
+import Login from './LoginForm'
 import log from './assets/logging_logo.png'
 
-class Content extends React.Component {
+class Home extends React.Component {
   constructor (props){
     super(props)
     this.props = props;
@@ -50,13 +49,13 @@ class Content extends React.Component {
   }
 }
 
-Content.propTypes = {
+Home.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string
 }
 
-Content.defaultProps = {
+Home.defaultProps = {
   className: 'banner0'
 }
 
-export default Content
+export default Home
